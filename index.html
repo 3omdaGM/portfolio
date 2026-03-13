@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed El-Taher | Full Stack Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand logo-text" href="#home">Mohamed El-Taher</a>
+
+      <div class="d-flex align-items-center gap-3 ms-auto order-lg-last">
+        <!-- Dark/Light Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <!-- Hamburger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="hamburger-icon">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section class="hero-section" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="container h-100">
+      <div class="row align-items-center h-100 g-5">
+
+        <!-- Left -->
+        <div class="col-lg-6 hero-left reveal-left">
+          <p class="hero-greeting"><span class="accent-dot"></span> Open to Opportunities</p>
+          <h1 class="hero-title">Hi, I'm <span class="gradient-text">Mohamed<br>El-Taher</span></h1>
+          <h2 class="hero-subtitle">Full Stack Developer</h2>
+          <p class="hero-desc">I build modern, scalable, and high-performance web applications — from elegant frontends
+            to robust backends.</p>
+
+          <div class="hero-buttons d-flex flex-wrap gap-3 mt-4">
+            <a href="#projects" class="btn btn-primary-custom">
+              <i class="fas fa-rocket me-2"></i>View Projects
+            </a>
+            <a href="#contact" class="btn btn-outline-custom">
+              <i class="fas fa-envelope me-2"></i>Contact Me
+            </a>
+            <a href="#contact" class="btn btn-ghost-custom">
+              <i class="fas fa-envelope me-2"></i>Hire Me
+            </a>
+          </div>
+
+          <div class="social-icons mt-4 d-flex gap-3">
+            <a href="https://github.com/3omdaGM" target="_blank" class="social-icon" aria-label="GitHub"><i
+                class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mohamed-eltaher-dev" target="_blank" class="social-icon"
+              aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.upwork.com/freelancers/~01bfe918942ac6cf67" target="_blank" class="social-icon"
+              aria-label="Upwork"><i class="fab fa-upwork"></i></a>
+            <a href="/cdn-cgi/l/email-protection#ea8785828b87878f8ec48f86c49e8b828f9898aa8d878b8386c4898587"
+              class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Right: Profile Card -->
+        <div class="col-lg-6 d-flex justify-content-center reveal-right">
+          <div class="profile-card">
+            <div class="profile-card-inner">
+              <div class="profile-img-wrap">
+                <img src="images/profile.jpg" alt="Mohamed El-Taher" class="profile-img" />
+                <div class="profile-ring"></div>
+              </div>
+              <div class="profile-badge">
+                <i class="fas fa-code"></i>
+                <span>Full Stack Dev</span>
+              </div>
+              <!-- <div class="profile-stats">
+                <div class="stat"><span class="stat-num" data-target="1">0</span><br><small>Big Project</small></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num" data-target="4">0</span><br><small>Years Study</small></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num" data-target="8">0</span><br><small>Technologies</small></div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll Down -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section class="section-pad" id="about">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">Get to Know Me</p>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="row align-items-center g-5 mt-2">
+        <div class="col-lg-6 reveal-left">
+          <div class="about-text-block">
+            <p>I'm <strong>Mohamed El-Taher</strong>, a Full-Stack Web Developer based in Zagazig, Egypt. Skilled in
+              both front-end and back-end development using HTML, CSS, Bootstrap, JavaScript, PHP, and Laravel.</p>
+            <p>With a strong academic background in Computer Science from Zagazig University, I have practical
+              experience developing web systems and dynamic websites. I'm passionate about writing clean, maintainable
+              code and creating efficient, scalable solutions.</p>
+            <p>Experienced in building responsive user interfaces, developing RESTful APIs, and working with MySQL
+              databases. I'm continuously learning new technologies and best practices to improve performance, security,
+              and user experience — working hard every day to be ready for the job market.</p>
+            <div class="about-tags d-flex flex-wrap gap-2 mt-3">
+              <span class="tag">Problem Solver</span>
+              <span class="tag">Fast Learner</span>
+              <span class="tag">Detail Oriented</span>
+              <span class="tag">Self-Motivated</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal-right">
+          <div class="about-info-grid">
+            <div class="info-card"><i class="fas fa-user"></i>
+              <div><strong>Name</strong><span>Mohamed El-Taher</span></div>
+            </div>
+            <div class="info-card"><i class="fas fa-map-marker-alt"></i>
+              <div><strong>Location</strong><span>Zagazig, Egypt</span></div>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <span>
+                  <a href="mailto:mohammed.el.taherr@gmail.com">
+                    mohammed.el.taherr@gmail.com
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div class="info-card"><i class="fas fa-briefcase"></i>
+              <div><strong>Status</strong><span>Open to Opportunities</span></div>
+            </div>
+            <div class="info-card"><i class="fas fa-graduation-cap"></i>
+              <div><strong>Degree</strong><span>Computer Science</span></div>
+            </div>
+            <div class="info-card"><i class="fas fa-language"></i>
+              <div><strong>Languages</strong><span>Arabic, English</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EDUCATION ═══════════════════════════ -->
+  <section class="section-pad section-alt" id="education">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">Academic Background</p>
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+      </div>
+      <div class="timeline mt-5">
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+
+          <div class="timeline-card">
+
+            <div class="timeline-date">2024 — 2028 (Expected)</div>
+
+            <h4>Bachelor of Computer Science</h4>
+
+            <h5>Zagazig University — Faculty of Computers and Information</h5>
+
+            <p>
+              Currently pursuing a Bachelor's degree in Computer Science.
+              Studying algorithms, data structures, databases, software engineering,
+              and web development while building real-world projects to develop
+              practical programming skills.
+            </p>
+
+            <div class="timeline-tags d-flex flex-wrap gap-2 mt-2">
+              <span class="tag">Algorithms</span>
+              <span class="tag">Data Structures</span>
+              <span class="tag">Databases</span>
+              <span class="tag">Web Development</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up">
+
+          <div class="timeline-dot">
+            <i class="fas fa-code"></i>
+          </div>
+
+          <div class="timeline-card">
+
+            <div class="timeline-date">2024 — Present</div>
+
+            <h4>Web Development Self Learning</h4>
+
+            <h5>Online Platforms & Personal Projects</h5>
+
+            <p>
+              Learning modern web development technologies including HTML, CSS, JavaScript,
+              PHP, and Laravel through online resources and practical projects.
+              Focused on building real-world applications and improving both front-end
+              and back-end development skills.
+            </p>
+
+            <div class="timeline-tags d-flex flex-wrap gap-2 mt-2">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Laravel</span>
+              <span class="tag">MySQL</span>
+            </div>
+
+          </div>
+
+        </div>
+  </section>
+
+  <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
+  <section class="section-pad" id="experience">
+    <div class="container">
+
+      <div class="section-header reveal-up">
+        <p class="section-label">My Journey</p>
+        <h2 class="section-title">My <span class="gradient-text">Experience</span></h2>
+      </div>
+
+      <div class="timeline mt-5">
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"><i class="fas fa-university"></i></div>
+
+          <div class="timeline-card">
+
+            <div class="timeline-date">2024 — 2028 (Expected)</div>
+
+            <h4>Computer Science Student</h4>
+
+            <h5>Zagazig University · Full-time</h5>
+
+            <p>
+              Currently studying Computer Science with focus on software engineering,
+              databases, and web development while building real-world programming projects.
+            </p>
+
+            <div class="timeline-tags d-flex flex-wrap gap-2 mt-2">
+              <span class="tag">Computer Science</span>
+              <span class="tag">Software Engineering</span>
+              <span class="tag">Web Development</span>
+              <span class="tag">Databases</span>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"><i class="fas fa-laptop-code"></i></div>
+
+          <div class="timeline-card">
+
+            <div class="timeline-date">2024 — Present</div>
+
+            <h4>Full Stack Web Developer — Personal Projects</h4>
+
+            <h5>Self Learning & Practical Development</h5>
+
+            <p>
+              Building full-stack web applications using Laravel, PHP, MySQL, and JavaScript
+              to strengthen practical development skills and create a strong portfolio.
+            </p>
+
+            <div class="timeline-tags d-flex flex-wrap gap-2 mt-2">
+              <span class="tag">Laravel</span>
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">JavaScript</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+  <section class="section-pad section-alt" id="skills">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">What I Work With</p>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+      </div>
+      <div class="row g-3 mt-4 justify-content-center">
+
+        <div class="col-6 col-md-4 col-lg-3 reveal-up">
+          <div class="skill-card">
+            <div class="skill-icon html"><i class="fab fa-html5"></i></div><span>HTML5</span>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="95"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 reveal-up">
+          <div class="skill-card">
+            <div class="skill-icon css"><i class="fab fa-css3-alt"></i></div><span>CSS3</span>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="90"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 reveal-up">
+          <div class="skill-card">
+            <div class="skill-icon js"><i class="fab fa-js-square"></i></div><span>JavaScript</span>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="85"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 reveal-up">
+          <div class="skill-card">
+            <div class="skill-icon php"><i class="fab fa-php"></i></div><span>PHP</span>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="88"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 reveal-up">
+          <div class="skill-card">
+            <div class="skill-icon laravel"><i class="fab fa-laravel"></i></div><span>Laravel</span>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="90"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 reveal-up">
+          <div class="skill-card">
+            <div class="skill-icon mysql"><i class="fas fa-database"></i></div><span>MySQL</span>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="82"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 reveal-up">
+          <div class="skill-card">
+            <div class="skill-icon git"><i class="fab fa-git-alt"></i></div><span>Git</span>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="85"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 reveal-up">
+          <div class="skill-card">
+            <div class="skill-icon bs"><i class="fab fa-bootstrap"></i></div><span>Bootstrap</span>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="92"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+  <section class="section-pad" id="projects">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">What I've Built</p>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+
+      <!-- Filter -->
+      <div class="project-filter d-flex justify-content-center flex-wrap gap-2 mt-4 reveal-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="laravel">Laravel</button>
+        <button class="filter-btn" data-filter="javascript">JavaScript</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      </div>
+
+      <div class="row g-4 mt-2" id="projectsGrid">
+
+        <div class="col-md-6 col-lg-4 reveal-up project-item" data-category="laravel fullstack">
+          <div class="project-card">
+            <div class="project-img-wrap">
+              <img src="https://placehold.co/600x340/1a2744/00d4ff?text=University+System"
+                alt="University Management System" class="project-img" />
+              <div class="project-overlay">
+                <a href="https://github.com/3omdaGM" target="_blank" class="overlay-btn"><i class="fab fa-github"></i>
+                  Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h4 class="project-title">University Management System</h4>
+              <p class="project-desc">A comprehensive system for managing students, courses, grades, and faculty.
+                Features role-based access control and dynamic dashboards.</p>
+              <div class="tech-badges d-flex flex-wrap gap-2">
+                <span class="tech-badge"><i class="fab fa-laravel"></i> Laravel</span>
+                <span class="tech-badge"><i class="fas fa-database"></i> MySQL</span>
+                <span class="tech-badge"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
+  <section class="section-pad section-alt" id="services">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">What I Offer</p>
+        <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
+      </div>
+      <div class="row g-4 mt-3">
+
+        <div class="col-md-6 col-lg-4 reveal-up">
+          <div class="service-card">
+            <div class="service-icon-wrap"><i class="fas fa-globe"></i></div>
+            <h4>Website Development</h4>
+            <p>Building responsive, modern websites tailored to your brand. Clean code, fast loading, and mobile-first
+              approach guaranteed.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-up">
+          <div class="service-card">
+            <div class="service-icon-wrap"><i class="fas fa-server"></i></div>
+            <h4>Backend Development</h4>
+            <p>Designing and building powerful server-side systems, databases, and business logic that scale with your
+              application needs.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-up">
+          <div class="service-card">
+            <div class="service-icon-wrap"><i class="fab fa-laravel"></i></div>
+            <h4>Laravel Applications</h4>
+            <p>Developing robust Laravel applications with clean architecture, Eloquent ORM, and modern PHP best
+              practices.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-up">
+          <div class="service-card">
+            <div class="service-icon-wrap"><i class="fas fa-plug"></i></div>
+            <h4>API Development</h4>
+            <p>Creating RESTful APIs with proper authentication, documentation, rate limiting, and efficient data
+              serialization.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-up">
+          <div class="service-card">
+            <div class="service-icon-wrap"><i class="fas fa-tachometer-alt"></i></div>
+            <h4>Website Optimization</h4>
+            <p>Improving performance, load times, and SEO of existing websites through code audits, caching, and best
+              practices.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-up">
+          <div class="service-card">
+            <div class="service-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+            <h4>Security & Maintenance</h4>
+            <p>Ongoing website maintenance, security hardening, updates, and monitoring to keep your application safe
+              and up-to-date.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ TESTIMONIALS ═══════════════════════════ -->
+  <section class="section-pad" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">Feedback</p>
+        <h2 class="section-title">What People <span class="gradient-text">Say</span></h2>
+      </div>
+      <div class="row justify-content-center mt-5 reveal-up">
+        <div class="col-lg-6 text-center">
+          <div class="testimonial-card" style="padding: 48px 32px;">
+            <div style="font-size: 3rem; margin-bottom: 20px; opacity: 0.4;">💬</div>
+            <h4 style="color: var(--text); font-size: 1.1rem; margin-bottom: 12px;">Testimonials Coming Soon</h4>
+            <p style="font-size: 0.95rem; line-height: 1.8;">I'm currently building my portfolio and working on
+              projects. Once I complete work for clients, their feedback will appear here. Have a project in mind? Let's
+              work together!</p>
+            <a href="#contact" class="btn btn-outline-custom mt-4"
+              style="display: inline-flex; align-items: center; gap: 8px;">
+              <i class="fas fa-envelope"></i> Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <section class="section-pad section-alt" id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="row g-5 mt-2 align-items-start">
+
+        <!-- Info -->
+        <div class="col-lg-5 reveal-left">
+          <div class="contact-info">
+            <p class="contact-intro">Have a project in mind or want to work together? I'd love to hear from you. Send me
+              a message and I'll get back to you as soon as possible.</p>
+            <div class="contact-items mt-4">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div><strong>Email</strong><span><a
+                      href="/cdn-cgi/l/email-protection#2d4042454c4040484903484103594c45485f5f6d4a404c4441034e4240"><span
+                        class="__cf_email__"
+                        data-cfemail="761b191e171b1b131258131a5802171e13040436111b171f1a5815191b">[email&#160;protected]</span></a></span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <div><strong>Phone</strong><span>+201202474017</span></div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div><strong>Location</strong><span>Zagazig, Egypt</span></div>
+              </div>
+            </div>
+            <div class="contact-socials mt-4 d-flex gap-3">
+              <a href="https://github.com/3omdaGM" target="_blank" class="social-icon" aria-label="GitHub"><i
+                  class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/mohamed-eltaher-dev" target="_blank" class="social-icon"
+                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.upwork.com/freelancers/~01bfe918942ac6cf67" target="_blank" class="social-icon"
+                aria-label="Upwork"><i class="fab fa-upwork"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="col-lg-7 reveal-right">
+          <form class="contact-form" id="contactForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" placeholder="John Doe" required />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" placeholder="Project Inquiry" />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                    required></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary-custom w-100">
+                  <i class="fas fa-paper-plane me-2"></i>Send Message
+                </button>
+              </div>
+              <div class="col-12">
+                <div id="formSuccess" class="form-success d-none">
+                  <i class="fas fa-check-circle me-2"></i>Message sent! I'll get back to you soon.
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Mohamed El-Taher</div>
+        <p class="footer-tagline">Building the web, one line at a time.</p>
+        <div class="footer-links d-flex justify-content-center flex-wrap gap-3 mt-3">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-socials d-flex justify-content-center gap-3 mt-3">
+          <a href="https://github.com/3omdaGM" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mohamed-eltaher-dev" target="_blank" aria-label="LinkedIn"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.upwork.com/freelancers/~01bfe918942ac6cf67" target="_blank" aria-label="Upwork"><i
+              class="fab fa-upwork"></i></a>
+          <a href="mailto:mohammed.el.taherr@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="footer-copy">© 2026 Mohamed El-Taher. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ═══════════════════════════ SCRIPTS ═══════════════════════════ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
