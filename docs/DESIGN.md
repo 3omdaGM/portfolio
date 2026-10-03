@@ -8,6 +8,6 @@ Additive styling lives in `assets/css/enhancements.css`. New geometry includes a
 
 Content comes from the supplied CV: all three projects with exact URLs and contribution details; .NET membership and NTI training with dates; education; Forward Program; all six skill categories; languages; corrected email/location/phone. Skill percentages and unsupported training-hour claims are removed. The service-card layout is retained as a CV-backed Focus section. Empty testimonial placeholders are removed.
 
-The original contact form remains visually consistent but opens a real email draft instead of displaying a simulated success. The full CV download stays disabled pending approval to publish the PDF.
+The contact form is removed as requested until a real submission system exists. The contact section is centered and retains direct email, telephone, and social links. The full CV download stays disabled pending approval to publish the PDF.
 
 The architecture separates content, the retained HTML template, the original stylesheet, additive effects, and interaction modules. No frontend framework migration is introduced.

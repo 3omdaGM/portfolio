@@ -34,10 +34,10 @@ Commit generated `index.html` whenever source content or templates change. GitHu
 
 Dark mode is still the default, with the original light/blue mode available. Motion can be paused and honors device reduced-motion preferences. Decorative geometry does not intercept clicks. The mobile menu, filters, native contribution disclosures, and theme toggle remain available. Main content is visible without JavaScript.
 
-The original contact form now opens an email draft rather than pretending it sent a message. Sending requires the visitor's email application. Direct email and telephone links are also provided.
+The contact form is removed until a real submission system is implemented. Visitors can use direct email, telephone, and social links.
 
 The complete CV PDF is not published pending explicit approval. `profile.cvUrl` remains null and no broken download button is rendered.
 
 ## Validation
 
-Static checks cover local assets, internal links, duplicate IDs, safe new-tab links, JavaScript syntax, and module imports. Original CSS preservation and HTML tag nesting were also checked. Browser rendering and interaction QA were unavailable in the authoring environment. Before merging, check mobile/desktop layouts, both themes, all project filters, pointer tilt, motion pause, reduced motion, email drafting, and keyboard navigation. Remote project links were copied from the CV; local checks do not establish their availability.
+Static checks cover local assets, internal links, duplicate IDs, safe new-tab links, JavaScript syntax, and module imports. Original CSS preservation and HTML tag nesting were also checked. Browser rendering and interaction QA were unavailable in the authoring environment. Before merging, check mobile/desktop layouts, both themes, all project filters, pointer tilt, motion pause, reduced motion, direct contact links, and keyboard navigation. Remote project links were copied from the CV; local checks do not establish their availability.
