@@ -1,13 +1,9 @@
-export function initContact() {
-  const button = document.querySelector('#copy-email');
-  const status = document.querySelector('#copy-status');
-  button.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(button.dataset.email);
-      status.textContent = 'Email copied to clipboard.';
-    } catch {
-      status.textContent = 'Copy unavailable. Select the email address or click it to open your email app.';
-    }
-  });
-  document.querySelector('#year').textContent = new Date().getFullYear();
+export function initContact(){
+ const form=document.querySelector('#contactForm');
+ form.addEventListener('submit',event=>{
+  event.preventDefault();if(!form.reportValidity())return;
+  const values=new FormData(form),subject=String(values.get('subject')||'Portfolio inquiry'),body=`From: ${values.get('name')}\nEmail: ${values.get('email')}\n\n${values.get('message')}`;
+  location.href=`mailto:mo3mmad200617@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  document.querySelector('#formSuccess').classList.remove('d-none');
+ });
 }

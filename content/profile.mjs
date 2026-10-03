@@ -18,7 +18,7 @@ export const projects = [
   ] },
   { id: 'portfolio', name: 'Developer Portfolio', category: 'frontend', role: 'Frontend Developer', subtitle: 'A personal space, built for the web.', description: 'A responsive portfolio presenting projects, technical knowledge, and the journey behind the work.', tags: ['HTML5', 'CSS3', 'TypeScript', 'Bootstrap'], links: [['GitHub', 'https://github.com/3omdaGM/portfolio'], ['Live demo', 'https://3omdaGM.github.io/portfolio']], details: [
     'Created a responsive portfolio with HTML5, CSS3, TypeScript, and Bootstrap; added dark/light themes, project filtering, and UI enhancements to showcase technical knowledge.',
-    'This redesigned edition uses dependency-free JavaScript modules and custom CSS. The technologies above describe the original project as listed in the CV.'
+    'The portfolio retains its original Bootstrap-based blue design, with modular JavaScript enhancements for animation and interaction.'
   ] }
 ];
 export const experience = [

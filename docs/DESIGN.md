@@ -1,34 +1,13 @@
-# Design and implementation notes
+# Scope: preserve the original blue portfolio
 
-## Direction
+The user's correction is authoritative: update the data and add animations/3D shapes without changing the portfolio's color identity or replacing its layout.
 
-An editorial developer portfolio: ivory paper-like surfaces, forest green, restrained lime, large sans-serif headlines with serif accents, numbered sections, and a balanced split hero. The layered CSS architecture illustration connects the interaction to Mohamed's backend/full-stack work.
+`style.css` is restored byte-for-byte from the original repository. This preserves the navy background, cyan (#00d4ff) and blue (#0066ff) accents, gradient buttons, Poppins/Inter typography, Bootstrap grid, profile card, timelines, skill cards, and contact layout. The earlier ivory/green design is removed.
 
-The page sequence is introduction → projects → biography and education → experience and development → complete skill set → contact. Project contributions use native expandable disclosures so readers can choose their level of detail.
+Additive styling lives in `assets/css/enhancements.css`. New geometry includes a rotating six-face wireframe cube, orbital rings, a blue glass sphere, floating C#/.NET/SQL labels, and pointer-driven depth on the existing portrait card. Motion has an explicit pause control, device reduced-motion support, and offscreen/tab visibility handling.
 
-## References researched
+Content comes from the supplied CV: all three projects with exact URLs and contribution details; .NET membership and NTI training with dates; education; Forward Program; all six skill categories; languages; corrected email/location/phone. Skill percentages and unsupported training-hour claims are removed. The service-card layout is retained as a CV-backed Focus section. Empty testimonial placeholders are removed.
 
-- https://brittanychiang.com/ — readable experience/project hierarchy, clear contribution descriptions, accessible navigation.
-- https://bruno-simon.com/ — a memorable interactive introduction that communicates a developer's interests through the experience itself.
-- https://www.taniarascia.com/ — direct, content-led developer presentation.
+The original contact form remains visually consistent but opens a real email draft instead of displaying a simulated success. The full CV download stays disabled pending approval to publish the PDF.
 
-These informed principles, not copied layouts, text, or assets. A game engine would shift attention away from the backend work and introduce substantial loading/runtime costs. The portfolio instead uses lightweight CSS 3D transforms and native browser APIs.
-
-## CV alignment
-
-The supplied MyCV.pdf is the content authority. Corrected the old email and location. Included all three projects, exact project URLs, both experience records and their dates, all six skill categories, Forward Program, degree and expected graduation, language proficiency, phone, GitHub, and LinkedIn. Removed unsupported skill percentages, unrelated service claims, and the old simulated contact form. Preserved the existing portrait.
-
-The portfolio project's original technologies are retained as historical CV content. A disclosure explains that this redesigned edition uses plain JavaScript and custom CSS.
-
-## Trade-offs
-
-- Static generation keeps searchable, accessible HTML and avoids loading data through client-side fetch.
-- Native ES modules isolate interaction responsibilities without a dependency/build toolchain.
-- The generation script owns page markup, while the content module owns repeatable resume records. A component framework can be introduced if the site grows beyond this scope.
-- System fonts avoid font-loading delays and third-party requests, with some platform-specific appearance differences.
-- Conceptual code-native project artwork avoids false screenshots and broken external placeholder images.
-- CSS breakpoints cover mobile, tablet, and desktop; actual visual QA remains necessary before release.
-
-## Changes from the original
-
-Replaced monolithic CSS/JavaScript and Bootstrap/Font Awesome CDNs with focused local modules. Removed the broken PDF target; the optional CV download remains disabled pending explicit approval to publish the complete PDF. Added metadata, favicon, skip navigation, guarded storage, no-JavaScript navigation fallback, reduced-motion handling, and honest email contact actions.
+The architecture separates content, the retained HTML template, the original stylesheet, additive effects, and interaction modules. No frontend framework migration is introduced.

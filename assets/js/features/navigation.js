@@ -1,40 +1,13 @@
-export function initNavigation() {
-  const menu = document.querySelector('#navigation');
-  const toggle = document.querySelector('.menu-toggle');
-  const links = [...menu.querySelectorAll('a')];
-  const setOpen = open => {
-    menu.dataset.open = String(open);
-    toggle.setAttribute('aria-expanded', String(open));
-  };
-  toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
-  links.forEach(link => link.addEventListener('click', () => setOpen(false)));
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && menu.dataset.open === 'true') { setOpen(false); toggle.focus(); }
-  });
-  document.addEventListener('click', event => {
-    if (!event.target.closest('.site-header')) setOpen(false);
-  });
-  menu.addEventListener('focusout', event => {
-    if (event.relatedTarget && !event.relatedTarget.closest('.site-header')) setOpen(false);
-  });
-  matchMedia('(min-width: 801px)').addEventListener('change', () => setOpen(false));
-  const sections = links.map(link => document.querySelector(link.hash));
-  const progress = document.querySelector('.reading-progress');
-  let pending = false;
-  const update = () => {
-    pending = false;
-    const total = document.documentElement.scrollHeight - innerHeight;
-    progress.style.transform = `scaleX(${total > 0 ? Math.min(1, Math.max(0, scrollY / total)) : 0})`;
-    let active = null;
-    for (const section of sections) if (section.getBoundingClientRect().top <= 160) active = section.id;
-    links.forEach(link => {
-      if (link.hash === `#${active}`) link.setAttribute('aria-current', 'location');
-      else link.removeAttribute('aria-current');
-    });
-  };
-  const schedule = () => { if (!pending) { pending = true; requestAnimationFrame(update); } };
-  addEventListener('scroll', schedule, { passive: true });
-  addEventListener('resize', schedule);
-  if ('ResizeObserver' in window) new ResizeObserver(schedule).observe(document.body);
-  update();
+export function initNavigation(){
+ const nav=document.querySelector('#mainNav'), menu=document.querySelector('#navMenu'), toggle=document.querySelector('.navbar-toggler'), links=[...document.querySelectorAll('.nav-link')], sections=[...document.querySelectorAll('section[id]')], top=document.querySelector('#scrollTop');
+ const close=()=>{if(window.bootstrap) window.bootstrap.Collapse.getOrCreateInstance(menu,{toggle:false}).hide();else{menu.classList.remove('show');toggle.setAttribute('aria-expanded','false');}};
+ if(!window.bootstrap) toggle.addEventListener('click',()=>{const open=menu.classList.toggle('show');toggle.setAttribute('aria-expanded',String(open));});
+ links.forEach(link=>link.addEventListener('click',close));
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu.classList.contains('show')){close();toggle.focus();}});
+ let pending=false;
+ const update=()=>{pending=false;nav.classList.toggle('scrolled',scrollY>60);top.classList.toggle('visible',scrollY>400);top.tabIndex=scrollY>400?0:-1;let current='home';sections.forEach(s=>{if(s.getBoundingClientRect().top<=130)current=s.id;});links.forEach(l=>{const active=l.hash===`#${current}`;l.classList.toggle('active',active);if(active)l.setAttribute('aria-current','location');else l.removeAttribute('aria-current');});const total=document.documentElement.scrollHeight-innerHeight;document.querySelector('.reading-progress').style.transform=`scaleX(${total>0?Math.min(1,scrollY/total):0})`;};
+ const schedule=()=>{if(!pending){pending=true;requestAnimationFrame(update);}};
+ addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);
+ if('ResizeObserver' in window)new ResizeObserver(schedule).observe(document.body);
+ top.addEventListener('click',()=>{scrollTo({top:0,behavior:document.documentElement.dataset.motion==='paused'?'instant':'smooth'});document.querySelector('.navbar-brand').focus({preventScroll:true});});update();
 }
