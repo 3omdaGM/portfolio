@@ -1,0 +1,13 @@
+{
+  "name": "mohamed-eltaher-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CV-backed static developer portfolio for GitHub Pages",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "serve": "python -m http.server 8000"
+  },
+  "engines": { "node": ">=20" }
+}
