@@ -11,9 +11,14 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/enhancements.css" />
+  <meta name="description" content="Mohamed El-Taher: C#/.NET backend and full-stack portfolio. Projects, experience, education, and skills." />
+  <script src="assets/js/theme-init.js"></script>
 </head>
 
 <body>
+<a class="skip-link" href="#home">Skip to content</a>
+<div class="reading-progress" aria-hidden="true"></div>
 
   <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
   <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
@@ -25,8 +30,9 @@
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <i class="fas fa-moon" id="themeIcon"></i>
         </button>
+        <button class="motion-toggle" id="motionToggle" aria-pressed="false">Pause animation</button>
         <!-- Hamburger -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="hamburger-icon">
             <span></span><span></span><span></span>
           </span>
@@ -41,7 +47,7 @@
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Focus</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -59,7 +65,7 @@
           <p class="hero-greeting"><span class="accent-dot"></span> Open to Opportunities</p>
           <h1 class="hero-title">Hi, I'm <span class="gradient-text">Mohamed<br>El-Taher</span></h1>
           <h2 class="hero-subtitle">Backend Developer</h2>
-          <p class="hero-desc">I build robust, scalable, and high-performance backend systems — from powerful APIs to secure database-driven applications.</p>
+          <p class="hero-desc">Computer Science student and aspiring Product Engineer, building RESTful APIs and database-driven web applications with C#/.NET and PHP/Laravel.</p>
 
           <div class="hero-buttons d-flex flex-wrap gap-3 mt-4">
             <a href="#projects" class="btn btn-primary-custom">
@@ -68,29 +74,26 @@
             <a href="#contact" class="btn btn-outline-custom">
               <i class="fas fa-envelope me-2"></i>Contact Me
             </a>
-            <a href="Mohamed_El-Taher_CV.pdf" download class="btn btn-ghost-custom">
-              <i class="fas fa-download me-2"></i>Download CV
-            </a>
+
           </div>
 
           <div class="social-icons mt-4 d-flex gap-3">
-            <a href="https://github.com/3omdaGM" target="_blank" class="social-icon" aria-label="GitHub"><i
+            <a href="https://github.com/3omdaGM" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i
                 class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/mohamed-eltaher-dev" target="_blank" class="social-icon"
+            <a href="https://www.linkedin.com/in/mohamed-eltaher-dev" target="_blank" rel="noopener noreferrer" class="social-icon"
               aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.upwork.com/freelancers/~01bfe918942ac6cf67" target="_blank" class="social-icon"
-              aria-label="Upwork"><i class="fab fa-upwork"></i></a>
-            <a href="mailto:mohammed.el.taherr@gmail.com" class="social-icon" aria-label="Email"><i
+
+            <a href="mailto:mo3mmad200617@gmail.com" class="social-icon" aria-label="Email"><i
                 class="fas fa-envelope"></i></a>
           </div>
         </div>
 
         <!-- Right: Profile Card -->
         <div class="col-lg-6 d-flex justify-content-center reveal-right">
-          <div class="profile-card">
+          <div class="profile-scene"><div class="shape-field" aria-hidden="true"><div class="cube-anchor"><div class="cube"><span class="cube-face front"></span><span class="cube-face back"></span><span class="cube-face left"></span><span class="cube-face right"></span><span class="cube-face top"></span><span class="cube-face bottom"></span></div></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="glass-sphere"></div><span class="floating-tech tech-a">&lt;/&gt; C#</span><span class="floating-tech tech-b">SQL</span><span class="floating-tech tech-c">.NET</span></div><div class="profile-card">
             <div class="profile-card-inner">
               <div class="profile-img-wrap">
-                <img src="images/profile.jpg" alt="Mohamed El-Taher" class="profile-img" />
+                <img src="images/profile.jpg" alt="Mohamed El-Taher" class="profile-img" width="851" height="1024" />
                 <div class="profile-ring"></div>
               </div>
               <div class="profile-badge">
@@ -98,6 +101,7 @@
                 <span>Backend Dev</span>
               </div>
             </div>
+          </div>
           </div>
         </div>
 
@@ -120,22 +124,7 @@
       </div>
       <div class="row align-items-center g-5 mt-2">
         <div class="col-lg-6 reveal-left">
-          <div class="about-text-block">
-            <p>I'm <strong>Mohamed El-Taher</strong>, a Backend Developer based in Zagazig, Egypt. Skilled in
-              back-end development using PHP and Laravel.</p>
-            <p>With a strong academic background in Computer Science from Zagazig University, I have practical
-              experience developing web systems and dynamic websites. I'm passionate about writing clean, maintainable
-              code and creating efficient, scalable backend solutions.</p>
-            <p>Experienced in developing RESTful APIs, working with MySQL (phpMyAdmin) databases, and building
-              server-side logic. I'm continuously learning new technologies and best practices to improve performance,
-              security, and scalability — working hard every day to be ready for the job market.</p>
-            <div class="about-tags d-flex flex-wrap gap-2 mt-3">
-              <span class="tag">Problem Solver</span>
-              <span class="tag">Fast Learner</span>
-              <span class="tag">Detail Oriented</span>
-              <span class="tag">Self-Motivated</span>
-            </div>
-          </div>
+          <div class="about-text-block"><p>Computer Science student and aspiring Product Engineer focused on developing high-impact web applications. Experienced in building RESTful APIs and database-driven systems with PHP/Laravel and C#/.NET; proficient in front-end development with HTML, CSS, and TypeScript. Applied software engineering principles (Clean Architecture, CQRS, SOLID) in team projects, contributing to software architecture decisions, development workflow improvements, and comprehensive team documentation.</p><div class="about-tags d-flex flex-wrap gap-2 mt-3"><span class="tag">Clean Architecture</span><span class="tag">CQRS</span><span class="tag">SOLID</span><span class="tag">Team Collaboration</span></div></div>
         </div>
         <div class="col-lg-6 reveal-right">
           <div class="about-info-grid">
@@ -143,13 +132,13 @@
               <div><strong>Name</strong><span>Mohamed El-Taher</span></div>
             </div>
             <div class="info-card"><i class="fas fa-map-marker-alt"></i>
-              <div><strong>Location</strong><span>Zagazig, Egypt</span></div>
+              <div><strong>Location</strong><span>Cairo, Egypt</span></div>
             </div>
             <div class="info-card">
               <i class="fas fa-envelope"></i>
               <div>
                 <strong>Email</strong>
-                <span><a href="mailto:mohammed.el.taherr@gmail.com" style="color:inherit;">mohammed.el.taherr@gmail.com</a></span>
+                <span><a href="mailto:mo3mmad200617@gmail.com" style="color:inherit;">mo3mmad200617@gmail.com</a></span>
               </div>
             </div>
             <div class="info-card"><i class="fas fa-briefcase"></i>
@@ -159,7 +148,7 @@
               <div><strong>Degree</strong><span>Computer Science</span></div>
             </div>
             <div class="info-card"><i class="fas fa-language"></i>
-              <div><strong>Languages</strong><span>Arabic, English</span></div>
+              <div><strong>Languages</strong><span>Arabic: Native<br>English: Professional Working Proficiency</span></div>
             </div>
           </div>
         </div>
@@ -168,373 +157,22 @@
   </section>
 
   <!-- ═══════════════════════════ EDUCATION ═══════════════════════════ -->
-  <section class="section-pad section-alt" id="education">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <p class="section-label">Academic Background</p>
-        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
-      </div>
-      <div class="timeline mt-5">
-
-        <div class="timeline-item reveal-up">
-          <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
-          <div class="timeline-card">
-            <div class="timeline-date">2024 — 2028 (Expected)</div>
-            <h4>Bachelor of Computer Science</h4>
-            <h5>Zagazig University — Faculty of Computers and Information</h5>
-            <p>
-              Currently pursuing a Bachelor's degree in Computer Science.
-              Studying algorithms, data structures, databases, software engineering,
-              and web development while building real-world projects to develop
-              practical programming skills.
-            </p>
-            <div class="timeline-tags d-flex flex-wrap gap-2 mt-2">
-              <span class="tag">Algorithms</span>
-              <span class="tag">Data Structures</span>
-              <span class="tag">Databases</span>
-              <span class="tag">Web Development</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-up">
-          <div class="timeline-dot"><i class="fas fa-network-wired"></i></div>
-          <div class="timeline-card">
-            <div class="timeline-date">2026</div>
-            <h4>Full Stack Web Development Training — 120 Hours</h4>
-            <h5>National Telecommunication Institute (NTI)</h5>
-            <p>
-              Completed an intensive 120-hour Full Stack training program at the National Telecommunication Institute.
-              The program covered both front-end and back-end technologies with hands-on practical projects,
-              focusing on building complete web applications from scratch.
-            </p>
-            <div class="timeline-tags d-flex flex-wrap gap-2 mt-2">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">PHP</span>
-              <span class="tag">Laravel</span>
-              <span class="tag">phpMyAdmin</span>
-              <span class="tag">120 Hours</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-up">
-          <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
-          <div class="timeline-card">
-            <div class="timeline-date">2026</div>
-            <h4>McKinsey Forward Program</h4>
-            <h5>McKinsey & Company</h5>
-            <p>
-              Participated in the McKinsey Forward Program — a learning initiative by McKinsey & Company
-              designed to equip young professionals with future-ready skills including problem solving,
-              communication, leadership, and analytical thinking.
-            </p>
-            <div class="timeline-tags d-flex flex-wrap gap-2 mt-2">
-              <span class="tag">Problem Solving</span>
-              <span class="tag">Leadership</span>
-              <span class="tag">Analytical Thinking</span>
-              <span class="tag">McKinsey</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <section class="section-pad section-alt" id="education"><div class="container"><div class="section-header reveal-up"><p class="section-label">Academic Background</p><h2 class="section-title">My <span class="gradient-text">Education</span></h2></div><div class="timeline mt-5"><div class="timeline-item reveal-up"><div class="timeline-dot"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div><div class="timeline-card"><div class="timeline-date">2024 — 2028 (Expected)</div><h4>Bachelor of Computer Science</h4><h5>Zagazig University</h5><p>Computer Science student developing practical experience through backend and full-stack team projects.</p></div></div><div class="timeline-item reveal-up"><div class="timeline-dot"><i class="fas fa-briefcase" aria-hidden="true"></i></div><div class="timeline-card"><div class="timeline-date">Jun 2026</div><h4>McKinsey.org Forward Program</h4><h5>Professional Development</h5><p>Professional development program focused on structured problem solving, communication, adaptability, teamwork, and digital & AI fundamentals.</p></div></div></div></div></section>
 
   <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
-  <section class="section-pad" id="experience">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <p class="section-label">My Journey</p>
-        <h2 class="section-title">My <span class="gradient-text">Experience</span></h2>
-      </div>
-
-      <div class="timeline mt-5">
-
-        <div class="timeline-item reveal-up">
-          <div class="timeline-dot"><i class="fas fa-university"></i></div>
-          <div class="timeline-card">
-            <div class="timeline-date">2024 — 2028 (Expected)</div>
-            <h4>Computer Science Student</h4>
-            <h5>Zagazig University · Full-time</h5>
-            <p>
-              Currently studying Computer Science with focus on software engineering,
-              databases, and backend web development while building real-world programming projects.
-            </p>
-            <div class="timeline-tags d-flex flex-wrap gap-2 mt-2">
-              <span class="tag">Computer Science</span>
-              <span class="tag">Software Engineering</span>
-              <span class="tag">Backend Development</span>
-              <span class="tag">Databases</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-up">
-          <div class="timeline-dot"><i class="fas fa-network-wired"></i></div>
-          <div class="timeline-card">
-            <div class="timeline-date">2026</div>
-            <h4>Full Stack Web Development Trainee</h4>
-            <h5>National Telecommunication Institute (NTI) · Training — 120 Hours</h5>
-            <p>
-              Completed a 120-hour intensive training program at NTI covering full stack web development.
-              Gained hands-on experience with HTML, CSS, PHP, Laravel, and phpMyAdmin through
-              practical projects and real-world application development.
-            </p>
-            <div class="timeline-tags d-flex flex-wrap gap-2 mt-2">
-              <span class="tag">PHP</span>
-              <span class="tag">Laravel</span>
-              <span class="tag">phpMyAdmin</span>
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">120 Hours</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-up">
-          <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
-          <div class="timeline-card">
-            <div class="timeline-date">2026</div>
-            <h4>McKinsey Forward Program</h4>
-            <h5>McKinsey & Company · Professional Development</h5>
-            <p>
-              Successfully completed the McKinsey Forward Program, a prestigious initiative by McKinsey & Company
-              that builds future-ready professionals through structured training in problem solving,
-              structured communication, and leadership skills.
-            </p>
-            <div class="timeline-tags d-flex flex-wrap gap-2 mt-2">
-              <span class="tag">McKinsey Forward</span>
-              <span class="tag">Problem Solving</span>
-              <span class="tag">Leadership</span>
-              <span class="tag">Communication</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-up">
-          <div class="timeline-dot"><i class="fas fa-laptop-code"></i></div>
-          <div class="timeline-card">
-            <div class="timeline-date">2025 — Present</div>
-            <h4>Backend Developer — Personal Projects</h4>
-            <h5>Self Learning & Practical Development</h5>
-            <p>
-              Building backend systems using Laravel, PHP and phpMyAdmin 
-              to strengthen practical development skills and create a strong portfolio.
-            </p>
-            <div class="timeline-tags d-flex flex-wrap gap-2 mt-2">
-              <span class="tag">Laravel</span>
-              <span class="tag">PHP</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">REST API</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <section class="section-pad " id="experience"><div class="container"><div class="section-header reveal-up"><p class="section-label">My Journey</p><h2 class="section-title">My <span class="gradient-text">Experience</span></h2></div><div class="timeline mt-5"><div class="timeline-item reveal-up"><div class="timeline-dot"><i class="fas fa-code" aria-hidden="true"></i></div><div class="timeline-card"><div class="timeline-date">Aug 2026 — Sep 2026</div><h4>.NET Member</h4><h5>Zag Eng Family</h5><ul class="cv-bullets"><li>Built RESTful API endpoints using C#, ASP.NET Core, and ASP.NET Web API with Entity Framework Core; implemented JWT authentication and authorization for secure access.</li><li>Applied Clean Architecture, CQRS/MediatR, Repository Pattern, Dependency Injection, and SOLID software engineering principles in team development to improve code organization.</li><li>Collaborated via Git/GitHub on feature development, database integration, and API testing; contributed to project documentation and team workflow improvements.</li></ul></div></div><div class="timeline-item reveal-up"><div class="timeline-dot"><i class="fas fa-code" aria-hidden="true"></i></div><div class="timeline-card"><div class="timeline-date">Jan 2026 — Mar 2026</div><h4>Full Stack Trainee</h4><h5>National Telecommunication Institute (NTI) · Zagazig, Egypt</h5><ul class="cv-bullets"><li>Completed full stack training in HTML5, CSS3, Bootstrap, PHP, MySQL, phpMyAdmin, and the Laravel web application framework.</li><li>Built the University Website during training, applying MVC and OOP patterns and implementing server-side validation for secure, maintainable features.</li><li>Developed responsive layouts and practiced database handling, code reviews, and debugging in collaborative training exercises.</li></ul></div></div></div></div></section>
 
   <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
-  <section class="section-pad section-alt" id="skills">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <p class="section-label">What I Work With</p>
-        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
-      </div>
-      <div class="row g-3 mt-4 justify-content-center">
-
-        <div class="col-6 col-md-4 col-lg-3 reveal-up">
-          <div class="skill-card">
-            <div class="skill-icon php"><i class="fab fa-php"></i></div><span>PHP</span>
-            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 reveal-up">
-          <div class="skill-card">
-            <div class="skill-icon laravel"><i class="fab fa-laravel"></i></div><span>Laravel</span>
-            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 reveal-up">
-          <div class="skill-card">
-            <div class="skill-icon mysql"><i class="fas fa-database"></i></div><span>MySQL</span>
-            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 reveal-up">
-          <div class="skill-card">
-            <div class="skill-icon mysql"><i class="fas fa-table"></i></div><span>phpMyAdmin</span>
-            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 reveal-up">
-          <div class="skill-card">
-            <div class="skill-icon git"><i class="fab fa-git-alt"></i></div><span>Git</span>
-            <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 reveal-up">
-          <div class="skill-card">
-            <div class="skill-icon html"><i class="fab fa-html5"></i></div><span>HTML5</span>
-            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 reveal-up">
-          <div class="skill-card">
-            <div class="skill-icon css"><i class="fab fa-css3-alt"></i></div><span>CSS3</span>
-            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-          </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 reveal-up">
-          <div class="skill-card">
-            <div class="skill-icon bs"><i class="fab fa-bootstrap"></i></div><span>Bootstrap</span>
-            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <section class="section-pad section-alt" id="skills"><div class="container"><div class="section-header reveal-up"><p class="section-label">What I Work With</p><h2 class="section-title">My <span class="gradient-text">Skills</span></h2></div><div class="row g-4 mt-4"><div class="col-md-6 col-lg-4 reveal-up"><div class="skill-card skill-category"><div class="skill-icon"><i class="fas fa-code" aria-hidden="true"></i></div><h3>Languages</h3><div class="tech-badges"><span class="tech-badge">C#</span><span class="tech-badge">C++</span><span class="tech-badge">PHP</span><span class="tech-badge">SQL</span><span class="tech-badge">TypeScript</span></div></div></div><div class="col-md-6 col-lg-4 reveal-up"><div class="skill-card skill-category"><div class="skill-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div><h3>Frameworks</h3><div class="tech-badges"><span class="tech-badge">ASP.NET Core</span><span class="tech-badge">ASP.NET Web API</span><span class="tech-badge">Laravel</span></div></div></div><div class="col-md-6 col-lg-4 reveal-up"><div class="skill-card skill-category"><div class="skill-icon"><i class="fas fa-database" aria-hidden="true"></i></div><h3>Data &amp; persistence</h3><div class="tech-badges"><span class="tech-badge">SQL Server</span><span class="tech-badge">MySQL</span><span class="tech-badge">Entity Framework Core</span><span class="tech-badge">ADO.NET</span><span class="tech-badge">Database Design</span></div></div></div><div class="col-md-6 col-lg-4 reveal-up"><div class="skill-card skill-category"><div class="skill-icon"><i class="fas fa-sitemap" aria-hidden="true"></i></div><h3>Architecture &amp; concepts</h3><div class="tech-badges"><span class="tech-badge">OOP</span><span class="tech-badge">Data Structures</span><span class="tech-badge">Algorithms</span><span class="tech-badge">Clean Architecture</span><span class="tech-badge">CQRS</span><span class="tech-badge">SOLID</span><span class="tech-badge">JWT</span></div></div></div><div class="col-md-6 col-lg-4 reveal-up"><div class="skill-card skill-category"><div class="skill-icon"><i class="fas fa-desktop" aria-hidden="true"></i></div><h3>Frontend</h3><div class="tech-badges"><span class="tech-badge">HTML5</span><span class="tech-badge">CSS3</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Bootstrap</span><span class="tech-badge">Responsive Web Design</span></div></div></div><div class="col-md-6 col-lg-4 reveal-up"><div class="skill-card skill-category"><div class="skill-icon"><i class="fas fa-tools" aria-hidden="true"></i></div><h3>Tools</h3><div class="tech-badges"><span class="tech-badge">Git</span><span class="tech-badge">GitHub</span><span class="tech-badge">Swagger</span><span class="tech-badge">Cloudinary</span></div></div></div></div></div></section>
 
   <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
-  <section class="section-pad" id="projects">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <p class="section-label">What I've Built</p>
-        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-      </div>
-
-      <!-- Filter -->
-      <div class="project-filter d-flex justify-content-center flex-wrap gap-2 mt-4 reveal-up">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="laravel">Laravel</button>
-        <button class="filter-btn" data-filter="api">REST API</button>
-        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-      </div>
-
-      <div class="row g-4 mt-2" id="projectsGrid">
-
-        <div class="col-md-6 col-lg-4 reveal-up project-item" data-category="laravel fullstack">
-          <div class="project-card">
-            <div class="project-img-wrap">
-              <img src="https://placehold.co/600x340/1a2744/00d4ff?text=University+System"
-                alt="University Management System" class="project-img" />
-              <div class="project-overlay">
-                <a href="https://github.com/3omdaGM" target="_blank" class="overlay-btn"><i class="fab fa-github"></i>
-                  Code</a>
-              </div>
-            </div>
-            <div class="project-body">
-              <h4 class="project-title">University Management System</h4>
-              <p class="project-desc">A comprehensive system for managing students, courses, grades, and faculty.
-                Features role-based access control and dynamic dashboards.</p>
-              <div class="tech-badges d-flex flex-wrap gap-2">
-                <span class="tech-badge"><i class="fab fa-laravel"></i> Laravel</span>
-                <span class="tech-badge"><i class="fas fa-database"></i> MySQL</span>
-                <span class="tech-badge"><i class="fab fa-bootstrap"></i> Bootstrap</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <section class="section-pad " id="projects"><div class="container"><div class="section-header reveal-up"><p class="section-label">What I Have Built</p><h2 class="section-title">My <span class="gradient-text">Projects</span></h2></div><div class="project-filters d-flex justify-content-center gap-2 flex-wrap mt-4 mb-4" role="group" aria-label="Filter projects"><button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button><button class="filter-btn " data-filter="backend" aria-pressed="false">Backend</button><button class="filter-btn " data-filter="fullstack" aria-pressed="false">Full Stack</button><button class="filter-btn " data-filter="frontend" aria-pressed="false">Frontend</button></div><p id="project-count" class="visually-hidden" role="status">Showing 3 projects</p><div class="row g-4"><div class="col-lg-4 col-md-6 project-item reveal-up" data-category="backend"><article class="project-card"><div class="project-visual visual-veloura" aria-hidden="true"><div class="visual-grid"></div><i class="fas fa-server"></i><span>Veloura</span><small>ASP.NET CORE / EF CORE</small></div><div class="project-body"><p class="project-role">Backend Developer</p><h3 class="project-title">Veloura</h3><p class="project-desc">Authentication, account features, discounts, and product image handling for an e-commerce backend.</p><div class="tech-badges"><span class="tech-badge">C#</span><span class="tech-badge">ASP.NET Core</span><span class="tech-badge">EF Core</span><span class="tech-badge">JWT</span><span class="tech-badge">MediatR</span><span class="tech-badge">Cloudinary</span></div><details class="project-details"><summary>My contribution</summary><ul class="cv-bullets"><li>Developed registration, login, and account features using C#, ASP.NET Core, Entity Framework Core, and JWT authentication for secure RESTful APIs.</li><li>Implemented discount management and product image handling with Cloudinary, connecting backend APIs to database persistence and image storage.</li><li>Contributed to the Clean Architecture and CQRS/MediatR backend, collaborating through Git/GitHub on features and debugging to improve system maintainability.</li></ul></details><div class="project-links"><a href="https://github.com/rehamhamdi/Veloura" target="_blank" rel="noopener noreferrer">GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://veloura-skin-two.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://veloura.runasp.net/swagger/index.html" target="_blank" rel="noopener noreferrer">Swagger <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div></article></div><div class="col-lg-4 col-md-6 project-item reveal-up" data-category="fullstack"><article class="project-card"><div class="project-visual visual-university" aria-hidden="true"><div class="visual-grid"></div><i class="fas fa-university"></i><span>University Website</span><small>PHP / MYSQL</small></div><div class="project-body"><p class="project-role">Full Stack Developer</p><h3 class="project-title">University Website</h3><p class="project-desc">A multi-page university website connecting responsive interfaces with PHP and MySQL.</p><div class="tech-badges"><span class="tech-badge">PHP</span><span class="tech-badge">MySQL</span><span class="tech-badge">JavaScript</span><span class="tech-badge">Bootstrap</span><span class="tech-badge">MVC</span></div><details class="project-details"><summary>My contribution</summary><ul class="cv-bullets"><li>Built a responsive multi-page website with PHP, HTML5, CSS3, Bootstrap, and JavaScript using reusable PHP components, MVC, and OOP concepts.</li><li>Managed MySQL databases via phpMyAdmin and implemented server-side validation and secure backend development practices.</li><li>Enhanced product design with scroll animations, animated statistics counters, responsive navigation, and glassmorphism styling.</li></ul></details><div class="project-links"><a href="https://github.com/3omdaGM/university-website" target="_blank" rel="noopener noreferrer">GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div></article></div><div class="col-lg-4 col-md-6 project-item reveal-up" data-category="frontend"><article class="project-card"><div class="project-visual visual-portfolio" aria-hidden="true"><div class="visual-grid"></div><i class="fas fa-laptop-code"></i><span>Developer Portfolio</span><small>HTML / CSS / TYPESCRIPT</small></div><div class="project-body"><p class="project-role">Frontend Developer</p><h3 class="project-title">Developer Portfolio</h3><p class="project-desc">A responsive portfolio presenting projects, technical knowledge, and the journey behind the work.</p><div class="tech-badges"><span class="tech-badge">HTML5</span><span class="tech-badge">CSS3</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Bootstrap</span></div><details class="project-details"><summary>My contribution</summary><ul class="cv-bullets"><li>Created a responsive portfolio with HTML5, CSS3, TypeScript, and Bootstrap; added dark/light themes, project filtering, and UI enhancements to showcase technical knowledge.</li><li>The portfolio retains its original Bootstrap-based blue design, with modular JavaScript enhancements for animation and interaction.</li></ul></details><div class="project-links"><a href="https://github.com/3omdaGM/portfolio" target="_blank" rel="noopener noreferrer">GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a href="https://3omdaGM.github.io/portfolio" target="_blank" rel="noopener noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div></div></article></div></div></div></section>
 
   <!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
-  <section class="section-pad section-alt" id="services">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <p class="section-label">What I Offer</p>
-        <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
-      </div>
-      <div class="row g-4 mt-3">
-
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <div class="service-card">
-            <div class="service-icon-wrap"><i class="fas fa-database"></i></div>
-            <h4>Database Design & Management</h4>
-            <p>Designing efficient, normalized database schemas and managing MySQL databases using phpMyAdmin for
-              optimal performance and data integrity.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <div class="service-card">
-            <div class="service-icon-wrap"><i class="fas fa-server"></i></div>
-            <h4>Backend Development</h4>
-            <p>Designing and building powerful server-side systems, databases, and business logic that scale with your
-              application needs.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <div class="service-card">
-            <div class="service-icon-wrap"><i class="fab fa-laravel"></i></div>
-            <h4>Laravel Applications</h4>
-            <p>Developing robust Laravel applications with clean architecture, Eloquent ORM, and modern PHP best
-              practices.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <div class="service-card">
-            <div class="service-icon-wrap"><i class="fas fa-plug"></i></div>
-            <h4>API Development</h4>
-            <p>Creating RESTful APIs with proper authentication, documentation, rate limiting, and efficient data
-              serialization.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <div class="service-card">
-            <div class="service-icon-wrap"><i class="fas fa-tachometer-alt"></i></div>
-            <h4>Performance Optimization</h4>
-            <p>Improving backend performance, query optimization, caching strategies, and server-side best
-              practices to make your application faster and more efficient.</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 reveal-up">
-          <div class="service-card">
-            <div class="service-icon-wrap"><i class="fas fa-shield-alt"></i></div>
-            <h4>Security & Maintenance</h4>
-            <p>Ongoing website maintenance, security hardening, updates, and monitoring to keep your application safe
-              and up-to-date.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  <section class="section-pad " id="services"><div class="container"><div class="section-header reveal-up"><p class="section-label">How I Apply My Skills</p><h2 class="section-title">My <span class="gradient-text">Focus</span></h2></div><div class="row g-4 mt-4"><div class="col-md-4 reveal-up"><div class="service-card"><div class="service-icon-wrap"><i class="fas fa-server" aria-hidden="true"></i></div><h4>Backend Development</h4><p>RESTful APIs, authentication and authorization with ASP.NET Core, EF Core, and JWT.</p></div></div><div class="col-md-4 reveal-up"><div class="service-card"><div class="service-icon-wrap"><i class="fas fa-database" aria-hidden="true"></i></div><h4>Database-Driven Applications</h4><p>Relational data and persistence with SQL Server, MySQL, Entity Framework Core, and ADO.NET.</p></div></div><div class="col-md-4 reveal-up"><div class="service-card"><div class="service-icon-wrap"><i class="fas fa-laptop-code" aria-hidden="true"></i></div><h4>Full-Stack Development</h4><p>Responsive interfaces and PHP/Laravel applications, applying MVC and OOP concepts.</p></div></div></div></div></section>
 
   <!-- ═══════════════════════════ TESTIMONIALS ═══════════════════════════ -->
-  <section class="section-pad" id="testimonials">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <p class="section-label">Feedback</p>
-        <h2 class="section-title">What People <span class="gradient-text">Say</span></h2>
-      </div>
-      <div class="row justify-content-center mt-5 reveal-up">
-        <div class="col-lg-6 text-center">
-          <div class="testimonial-card" style="padding: 48px 32px;">
-            <div style="font-size: 3rem; margin-bottom: 20px; opacity: 0.4;">💬</div>
-            <h4 style="color: var(--text); font-size: 1.1rem; margin-bottom: 12px;">Testimonials Coming Soon</h4>
-            <p style="font-size: 0.95rem; line-height: 1.8;">I'm currently building my portfolio and working on
-              projects. Once I complete work for clients, their feedback will appear here. Have a project in mind? Let's
-              work together!</p>
-            <a href="#contact" class="btn btn-outline-custom mt-4"
-              style="display: inline-flex; align-items: center; gap: 8px;">
-              <i class="fas fa-envelope"></i> Get In Touch
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
   <section class="section-pad section-alt" id="contact">
@@ -546,80 +184,37 @@
       <div class="row g-5 mt-2 align-items-start">
 
         <!-- Info -->
-        <div class="col-lg-5 reveal-left">
+        <div class="col-lg-8 mx-auto reveal-up">
           <div class="contact-info">
-            <p class="contact-intro">Have a project in mind or want to work together? I'd love to hear from you. Send me
-              a message and I'll get back to you as soon as possible.</p>
+            <p class="contact-intro">Have a project in mind or want to work together? Reach me directly by email, phone, or LinkedIn.</p>
             <div class="contact-items mt-4">
               <div class="contact-item">
                 <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                 <div>
                   <strong>Email</strong>
-                  <span><a href="mailto:mohammed.el.taherr@gmail.com" style="color:inherit;">mohammed.el.taherr@gmail.com</a></span>
+                  <span><a href="mailto:mo3mmad200617@gmail.com" style="color:inherit;">mo3mmad200617@gmail.com</a></span>
                 </div>
               </div>
               <div class="contact-item">
                 <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                <div><strong>Phone</strong><span>+201202474017</span></div>
+                <div><strong>Phone</strong><span><a href="tel:+201202474017">+20 120 247 4017</a></span></div>
               </div>
               <div class="contact-item">
                 <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <div><strong>Location</strong><span>Zagazig, Egypt</span></div>
+                <div><strong>Location</strong><span>Cairo, Egypt</span></div>
               </div>
             </div>
             <div class="contact-socials mt-4 d-flex gap-3">
-              <a href="https://github.com/3omdaGM" target="_blank" class="social-icon" aria-label="GitHub"><i
+              <a href="https://github.com/3omdaGM" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i
                   class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/mohamed-eltaher-dev" target="_blank" class="social-icon"
+              <a href="https://www.linkedin.com/in/mohamed-eltaher-dev" target="_blank" rel="noopener noreferrer" class="social-icon"
                 aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://www.upwork.com/freelancers/~01bfe918942ac6cf67" target="_blank" class="social-icon"
-                aria-label="Upwork"><i class="fab fa-upwork"></i></a>
+
             </div>
           </div>
         </div>
 
-        <!-- Form -->
-        <div class="col-lg-7 reveal-right">
-          <form class="contact-form" id="contactForm">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="name">Your Name</label>
-                  <input type="text" id="name" name="name" placeholder="John Doe" required />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="email">Your Email</label>
-                  <input type="email" id="email" name="email" placeholder="john@example.com" required />
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group">
-                  <label for="subject">Subject</label>
-                  <input type="text" id="subject" name="subject" placeholder="Project Inquiry" />
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
-                    required></textarea>
-                </div>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-primary-custom w-100">
-                  <i class="fas fa-paper-plane me-2"></i>Send Message
-                </button>
-              </div>
-              <div class="col-12">
-                <div id="formSuccess" class="form-success d-none">
-                  <i class="fas fa-check-circle me-2"></i>Message sent! I'll get back to you soon.
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
+
 
       </div>
     </div>
@@ -635,16 +230,15 @@
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
-          <a href="#services">Services</a>
+          <a href="#services">Focus</a>
           <a href="#contact">Contact</a>
         </div>
         <div class="footer-socials d-flex justify-content-center gap-3 mt-3">
-          <a href="https://github.com/3omdaGM" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/mohamed-eltaher-dev" target="_blank" aria-label="LinkedIn"><i
+          <a href="https://github.com/3omdaGM" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mohamed-eltaher-dev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
               class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.upwork.com/freelancers/~01bfe918942ac6cf67" target="_blank" aria-label="Upwork"><i
-              class="fab fa-upwork"></i></a>
-          <a href="mailto:mohammed.el.taherr@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+
+          <a href="mailto:mo3mmad200617@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         </div>
         <p class="footer-copy">© 2026 Mohamed El-Taher. All rights reserved.</p>
       </div>
@@ -658,7 +252,7 @@
 
   <!-- ═══════════════════════════ SCRIPTS ═══════════════════════════ -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 
 </body>
 

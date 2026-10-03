@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed El-Taher | Backend Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/enhancements.css" />
+  <meta name="description" content="Mohamed El-Taher: C#/.NET backend and full-stack portfolio. Projects, experience, education, and skills." />
+  <script src="assets/js/theme-init.js"></script>
+</head>
+
+<body>
+<a class="skip-link" href="#home">Skip to content</a>
+<div class="reading-progress" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand logo-text" href="#home">Mohamed El-Taher</a>
+
+      <div class="d-flex align-items-center gap-3 ms-auto order-lg-last">
+        <!-- Dark/Light Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="motion-toggle" id="motionToggle" aria-pressed="false">Pause animation</button>
+        <!-- Hamburger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger-icon">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Focus</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section class="hero-section" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="container h-100">
+      <div class="row align-items-center h-100 g-5">
+
+        <!-- Left -->
+        <div class="col-lg-6 hero-left reveal-left">
+          <p class="hero-greeting"><span class="accent-dot"></span> Open to Opportunities</p>
+          <h1 class="hero-title">Hi, I'm <span class="gradient-text">Mohamed<br>El-Taher</span></h1>
+          <h2 class="hero-subtitle">Backend Developer</h2>
+          <p class="hero-desc">Computer Science student and aspiring Product Engineer, building RESTful APIs and database-driven web applications with C#/.NET and PHP/Laravel.</p>
+
+          <div class="hero-buttons d-flex flex-wrap gap-3 mt-4">
+            <a href="#projects" class="btn btn-primary-custom">
+              <i class="fas fa-rocket me-2"></i>View Projects
+            </a>
+            <a href="#contact" class="btn btn-outline-custom">
+              <i class="fas fa-envelope me-2"></i>Contact Me
+            </a>
+            {{CV_LINK}}
+          </div>
+
+          <div class="social-icons mt-4 d-flex gap-3">
+            <a href="https://github.com/3omdaGM" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i
+                class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mohamed-eltaher-dev" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+
+            <a href="mailto:mo3mmad200617@gmail.com" class="social-icon" aria-label="Email"><i
+                class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Right: Profile Card -->
+        <div class="col-lg-6 d-flex justify-content-center reveal-right">
+          <div class="profile-scene">{{SHAPES}}<div class="profile-card">
+            <div class="profile-card-inner">
+              <div class="profile-img-wrap">
+                <img src="images/profile.jpg" alt="Mohamed El-Taher" class="profile-img" width="851" height="1024" />
+                <div class="profile-ring"></div>
+              </div>
+              <div class="profile-badge">
+                <i class="fas fa-server"></i>
+                <span>Backend Dev</span>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll Down -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section class="section-pad" id="about">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">Get to Know Me</p>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="row align-items-center g-5 mt-2">
+        <div class="col-lg-6 reveal-left">
+          <div class="about-text-block">{{SUMMARY}}</div>
+        </div>
+        <div class="col-lg-6 reveal-right">
+          <div class="about-info-grid">
+            <div class="info-card"><i class="fas fa-user"></i>
+              <div><strong>Name</strong><span>Mohamed El-Taher</span></div>
+            </div>
+            <div class="info-card"><i class="fas fa-map-marker-alt"></i>
+              <div><strong>Location</strong><span>Cairo, Egypt</span></div>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <span><a href="mailto:mo3mmad200617@gmail.com" style="color:inherit;">mo3mmad200617@gmail.com</a></span>
+              </div>
+            </div>
+            <div class="info-card"><i class="fas fa-briefcase"></i>
+              <div><strong>Status</strong><span>Open to Opportunities</span></div>
+            </div>
+            <div class="info-card"><i class="fas fa-graduation-cap"></i>
+              <div><strong>Degree</strong><span>Computer Science</span></div>
+            </div>
+            <div class="info-card"><i class="fas fa-language"></i>
+              <div><strong>Languages</strong><span>Arabic: Native<br>English: Professional Working Proficiency</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EDUCATION ═══════════════════════════ -->
+  {{EDUCATION}}
+
+  <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
+  {{EXPERIENCE}}
+
+  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+  {{SKILLS}}
+
+  <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+  {{PROJECTS}}
+
+  <!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
+  {{SERVICES}}
+
+  <!-- ═══════════════════════════ TESTIMONIALS ═══════════════════════════ -->
+
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <section class="section-pad section-alt" id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="row g-5 mt-2 align-items-start">
+
+        <!-- Info -->
+        <div class="col-lg-8 mx-auto reveal-up">
+          <div class="contact-info">
+            <p class="contact-intro">Have a project in mind or want to work together? Reach me directly by email, phone, or LinkedIn.</p>
+            <div class="contact-items mt-4">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <strong>Email</strong>
+                  <span><a href="mailto:mo3mmad200617@gmail.com" style="color:inherit;">mo3mmad200617@gmail.com</a></span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <div><strong>Phone</strong><span><a href="tel:+201202474017">+20 120 247 4017</a></span></div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div><strong>Location</strong><span>Cairo, Egypt</span></div>
+              </div>
+            </div>
+            <div class="contact-socials mt-4 d-flex gap-3">
+              <a href="https://github.com/3omdaGM" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i
+                  class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/mohamed-eltaher-dev" target="_blank" rel="noopener noreferrer" class="social-icon"
+                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Mohamed El-Taher</div>
+        <p class="footer-tagline">Building the web, one line at a time.</p>
+        <div class="footer-links d-flex justify-content-center flex-wrap gap-3 mt-3">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#services">Focus</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-socials d-flex justify-content-center gap-3 mt-3">
+          <a href="https://github.com/3omdaGM" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mohamed-eltaher-dev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+              class="fab fa-linkedin-in"></i></a>
+
+          <a href="mailto:mo3mmad200617@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="footer-copy">© 2026 Mohamed El-Taher. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ═══════════════════════════ SCRIPTS ═══════════════════════════ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
